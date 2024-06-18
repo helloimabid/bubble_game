@@ -94,3 +94,22 @@ body{
     background-color: aliceblue;
     padding: 10px 20px;
 }
+
+.rules a button{
+    margin: 1.5rem;
+    padding: 20px 40px;
+    border: none;
+    background-color: rgb(0, 255, 213);
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    color: aliceblue;
+}
+.rules a button:hover{
+    cursor: pointer;
+}
+@keyframes example {
+    from {background-color: rgb(0, 247, 255);}
+    /* from {background-color: aqua;} */
+    to {background-color: rgb(175, 29, 248);}
+  }
