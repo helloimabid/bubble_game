@@ -20,10 +20,12 @@ function generateBubbles() {
 
     let bottomWidth = bottom.clientWidth;
     let bottomHeight = bottom.clientHeight;
-
-    let columns = Math.floor(bottomWidth / totalBubbleSize);
-    let rows = Math.floor(bottomHeight / totalBubbleSize);
-
+    console.log(bottomWidth)
+    console.log(bottomHeight)
+    let columns = Math.floor(bottomWidth / totalBubbleSize) - 2 ;
+    let rows = Math.floor(bottomHeight / totalBubbleSize) - 2;
+    console.log(columns)
+    console.log(rows)
     let totalBubbles = columns * rows;
 
     let bubbleNumbers = []
