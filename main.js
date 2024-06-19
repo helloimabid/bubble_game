@@ -3,7 +3,7 @@ let timer = 60;
 let status = 0;
 let score = 0;
 let ranhit;
-
+let bubbleNumbers = [];
 document.addEventListener("DOMContentLoaded", function () {
     generateBubbles();
     hitnum();
@@ -20,15 +20,13 @@ function generateBubbles() {
 
     let bottomWidth = bottom.clientWidth;
     let bottomHeight = bottom.clientHeight;
-    console.log(bottomWidth)
-    console.log(bottomHeight)
+
     let columns = Math.floor(bottomWidth / totalBubbleSize) - 2 ;
     let rows = Math.floor(bottomHeight / totalBubbleSize) - 2;
-    console.log(columns)
-    console.log(rows)
+
     let totalBubbles = columns * rows;
 
-    let bubbleNumbers = []
+    bubbleNumbers = []
 
 
 
@@ -43,8 +41,7 @@ function generateBubbles() {
         bubble.style.margin = `${margin / 2}px`;
         bottom.appendChild(bubble);
     }
-    ranhit = bubbleNumbers[Math.floor(Math.random() * bubbleNumbers.length)]
-    document.querySelector(".hitscore").textContent = ranhit
+    hitnum()
 }
 
 document.querySelector(".st-btn").addEventListener("click", function () {
@@ -75,7 +72,7 @@ document.querySelector(".st-btn").addEventListener("click", function () {
 });
 
 function hitnum() {
-    ranhit = Math.floor(Math.random() * 10);
+    ranhit = bubbleNumbers[Math.floor(Math.random()* bubbleNumbers.length)]
     document.querySelector(".hitscore").textContent = ranhit;
 }
 
