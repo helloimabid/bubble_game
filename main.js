@@ -6,15 +6,15 @@ let ranhit;
 
 document.addEventListener("DOMContentLoaded", function () {
     generateBubbles();
-    hitnum(); 
+    hitnum();
     window.addEventListener("resize", generateBubbles);
 });
 
-function generateBubbles(){
+function generateBubbles() {
     let bottom = document.querySelector(".bottom");
     bottom.innerHTML = '';
 
-    let bubbleSize = 45; // bubble size including margin
+    let bubbleSize = 45;
     let margin = 10;
     let totalBubbleSize = bubbleSize + margin;
 
@@ -41,7 +41,7 @@ function generateBubbles(){
         bubble.style.margin = `${margin / 2}px`;
         bottom.appendChild(bubble);
     }
-    ranhit = bubbleNumbers[Math.floor(Math.random()*bubbleNumbers.length)]
+    ranhit = bubbleNumbers[Math.floor(Math.random() * bubbleNumbers.length)]
     document.querySelector(".hitscore").textContent = ranhit
 }
 
@@ -57,9 +57,10 @@ document.querySelector(".st-btn").addEventListener("click", function () {
                 } else {
                     clearInterval(timecount);
                     document.querySelector(".top").innerHTML = "RESULTS";
-                    document.querySelector(".bottom").innerHTML = `<h1 style="font-weight: 500;" >GAME OVER</h1>
-                    <h3>YOUR SCORE IS:</h3>
-                    ${score}`;
+                    document.querySelector(".bottom").innerHTML = `<div>
+                    <div><h1>GAME OVER</h1></div>
+                    <div><h3>Your Score Is:${score}</h3></div>
+                    </div>`;
                 }
             }, 1000);
         }
@@ -86,7 +87,7 @@ document.querySelector(".bottom").addEventListener("click", function (event) {
         } else {
             alert("Wrong number!!!!!!!!");
             hitnum();
-            generateBubbles(); 
+            generateBubbles();
             scoreDecreaser();
         }
     } else if (status == 0) {
@@ -99,7 +100,7 @@ function scoreIncreaser() {
     document.querySelector(".score").textContent = score;
 }
 
-function scoreDecreaser(){
+function scoreDecreaser() {
     score -= 10;
     document.querySelector(".score").textContent = score;
 }
