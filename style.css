@@ -45,18 +45,26 @@ body{
     width: 85%;
     background-color: aliceblue;
     border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
     
 }
-.bottom{
-    height: calc(100% - 100px);
-    width: 100%;
+.bottom {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-wrap: wrap;
-    flex-direction: column;
-
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    overflow: auto;
+    background-color: rgb(255, 250, 250);
+    padding: 10px;
+    border-radius: 10px;
+    flex-grow: 1;
+    width: 100%;
+    height: calc(100% - 100px);
+    overflow: hidden;
 }
+
 .bubble{
     height: 45px;
     width: 45px;
@@ -116,3 +124,8 @@ body{
 
 
 
+@media only screen and (max-width:400px) {
+    .top{
+        font-size: 12px;
+    }
+}
