@@ -6,6 +6,12 @@
     box-sizing: border-box;
 }
 
+:root{
+    --color1:rgb(64, 46, 122);
+    --color2:rgb(76, 59, 207);
+    --color3:rgb(75, 112, 245);
+    --color4:rgb(91, 216, 254);
+}
 
 html, body{
     width: 100%;
@@ -13,7 +19,7 @@ html, body{
 }
 /* font-family: "Roboto Mono", monospace; */
 body{
-    background-color: rgb(159, 225, 225);
+    background-color: var(--color1);
 }
 .parent{
     height: 100%;
@@ -26,7 +32,7 @@ body{
 .main{
     height: 80%;
     width: 80%;
-    background-color: rgb(22, 240, 149);
+    background-color: var(--color3);
     overflow: hidden;
     border-radius: 1rem;
 }
@@ -36,22 +42,23 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(72, 173, 227);
+    background-color: var(--color2);
+    color: white;
 }
 .describe{
     max-height: 400px;
     overflow-y: auto;
     margin: 2rem;
     line-height: 5vh;
-    color: rgb(0, 30, 255);
+    color: white;
 }
 .describe a{
     text-decoration: none;
-    color: azure;
+    color: var(--color1);
 }
 .describe a:hover{
     text-decoration: underline;
-    color: rgb(162, 0, 255);
+    color: var(--color4);
 }
 .separator{
     margin-top: 20px;
@@ -59,6 +66,22 @@ body{
     /* text-align: center; */
     height: 1px;
     width: 100%;
-    background-color: black;
+    background-color: var(--color1);
 }
+ ::-webkit-scrollbar{
+    width: 15px;
 
+ }
+ ::-webkit-scrollbar-track{
+    background: var(--color1);
+    border-radius: 10px;
+
+ }
+ ::-webkit-scrollbar-thumb{
+    background:linear-gradient(var(--color1), var(--color4));
+    border-radius: 10px;
+    transition: 1s;
+ }
+ ::-webkit-scrollbar-thumb:hover{
+    background:linear-gradient(var(--color4), var(--color1));
+ }
