@@ -7,10 +7,10 @@
 }
 
 :root{
-    --color1:rgb(64, 46, 122);
-    --color2:rgb(76, 59, 207);
-    --color3:rgb(75, 112, 245);
-    --color4:rgb(91, 216, 254);
+    --color1:rgb(255, 242, 215);
+    --color2:rgb(255, 224, 181);
+    --color3:rgb(248, 199, 148);
+    --color4:rgb(216, 174, 126);
 }
 html, body{
     width: 100%;
@@ -33,14 +33,14 @@ body{
     margin: 1rem;
     padding: 10px 40px;
     border: none;
-    color: var(--color2);
+    color: var(--color4);
     font-weight: 600;
-    background-color: var(--color3);
+    background-color: var(--color2);
     
 }
 .st-btn:hover{
-    background-color: var(--color2);
-    color: var(--color4);
+    background-color: var(--color3);
+    color: white;
     cursor: pointer;
     transition: linear  0.5s;
 }
@@ -107,6 +107,7 @@ body{
     background-color: var(--color4);
     padding: 10px 20px;
     border-radius: 5px;
+    color: white;
 }
 
 .rules a button{

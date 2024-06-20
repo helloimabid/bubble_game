@@ -7,10 +7,10 @@
 }
 
 :root{
-    --color1:rgb(64, 46, 122);
-    --color2:rgb(76, 59, 207);
-    --color3:rgb(75, 112, 245);
-    --color4:rgb(91, 216, 254);
+    --color1:rgb(255, 242, 215);
+    --color2:rgb(255, 224, 181);
+    --color3:rgb(248, 199, 148);
+    --color4:rgb(216, 174, 126);
 }
 
 html, body{
@@ -32,7 +32,7 @@ body{
 .main{
     height: 80%;
     width: 80%;
-    background-color: var(--color3);
+    background-color: var(--color4);
     overflow: hidden;
     border-radius: 1rem;
 }
@@ -58,7 +58,7 @@ body{
 }
 .describe a:hover{
     text-decoration: underline;
-    color: var(--color4);
+    color: white;
 }
 .separator{
     margin-top: 20px;
