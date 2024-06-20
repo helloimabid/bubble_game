@@ -46,9 +46,9 @@ body{
     color: white;
 }
 .describe{
-    max-height: 400px;
+    max-height: 450px;
     overflow-y: auto;
-    margin: 2rem;
+    margin: 1rem;
     line-height: 5vh;
     color: white;
 }
