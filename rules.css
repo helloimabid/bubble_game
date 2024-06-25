@@ -68,6 +68,11 @@ body{
     width: 100%;
     background-color: var(--color1);
 }
+
+.src{
+    font-weight: 900;
+    font-size: 25px;
+}
  ::-webkit-scrollbar{
     width: 15px;
 

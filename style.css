@@ -124,6 +124,19 @@ body{
     cursor: pointer;
     /* background-color: var(--color4); */
 }
+
+
+.reload button{
+    margin: 1.5rem;
+    padding: 20px 30px;
+    border: none;
+    background-color: var(--color4);
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    color: var(--color1);
+    cursor: pointer;
+}
 @keyframes example {
     from {background-color: var(--color4);}
     /* from {background-color: aqua;} */
