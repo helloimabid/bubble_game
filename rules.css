@@ -109,7 +109,7 @@ body {
     }
 
     .describe {
-        height: calc(90% - 2rem); /* Adjust height */
+        height: calc(90% - 5rem); /* Adjust height */
         line-height: 4vh; /* Adjust line height if necessary */
     }
 
