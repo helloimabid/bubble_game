@@ -7,10 +7,10 @@
 }
 
 :root {
-    --color1: rgb(255, 242, 215);
-    --color2: rgb(255, 224, 181);
-    --color3: rgb(248, 199, 148);
-    --color4: rgb(216, 174, 126);
+    --color1:rgb(7, 15, 43);
+    --color2:rgb(27, 26, 85);
+    --color3:rgb(83, 92, 145);
+    --color4:rgb(255, 255, 255);
 }
 
 html, body {
@@ -36,7 +36,7 @@ body {
     height: 80%;
     width: 80%;
     max-width: 600px; /* Add a max-width */
-    background-color: var(--color4);
+    background-color: var(--color3);
     overflow: hidden;
     border-radius: 1rem;
 }

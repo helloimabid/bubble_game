@@ -1,4 +1,4 @@
-let timer = 60;
+let timer = 6;
 let status = 0;
 let score = 0;
 let ranhit;
