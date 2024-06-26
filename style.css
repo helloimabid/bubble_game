@@ -36,7 +36,6 @@ body{
     color: var(--color4);
     font-weight: 600;
     background-color: var(--color2);
-    
 }
 .st-btn:hover{
     background-color: var(--color3);
@@ -52,7 +51,6 @@ body{
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
-    
 }
 .bottom {
     display: flex;
@@ -60,7 +58,6 @@ body{
     justify-content: center;
     align-items: center;
     gap: 10px;
-    /* overflow: auto; */
     background-color: var(--color4);
     padding: 10px;
     border-radius: 10px;
@@ -69,7 +66,6 @@ body{
     height: calc(100% - 100px);
     overflow: hidden;
 }
-
 .bubble{
     height: 45px;
     width: 45px;
@@ -87,8 +83,6 @@ body{
     cursor: pointer;
     transition: 0.4s;
 }
-
-
 .top{
     height: 100px;
     width: 100%;
@@ -96,7 +90,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-around;
-
 }
 .hit, .scores, .timer{
     display: flex;
@@ -109,7 +102,6 @@ body{
     border-radius: 5px;
     color: white;
 }
-
 .rules a button{
     margin: 1.5rem;
     padding: 20px 40px;
@@ -122,10 +114,7 @@ body{
 }
 .rules a button:hover{
     cursor: pointer;
-    /* background-color: var(--color4); */
 }
-
-
 .reload button{
     margin: 1.5rem;
     padding: 20px 30px;
@@ -139,14 +128,45 @@ body{
 }
 @keyframes example {
     from {background-color: var(--color4);}
-    /* from {background-color: aqua;} */
     to {background-color: var(--color2);}
-  }
-
-
-
+}
 @media only screen and (max-width:400px) {
     .top{
         font-size: 12px;
     }
+}
+
+.scoreboard {
+    width: 85%;
+    margin-top: 1rem;
+    padding: 10px;
+    background-color: var(--color2);
+    border-radius: 10px;
+    color: var(--color4);
+    text-align: center;
+}
+.scoreboard h3 {
+    margin-bottom: 10px;
+}
+.score-list {
+    list-style: none;
+    padding: 0;
+}
+.score-list li {
+    padding: 5px;
+    background-color: var(--color4);
+    color: white;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+.myScore{
+    margin: 1.5rem;
+    padding: 20px 30px;
+    border: none;
+    background-color: var(--color4);
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    color: var(--color1);
+    cursor: pointer;
 }

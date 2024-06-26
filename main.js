@@ -1,12 +1,19 @@
-let timer = 60;
+let timer = 6;
 let status = 0;
 let score = 0;
 let ranhit;
 let bubbleNumbers = [];
+
 document.addEventListener("DOMContentLoaded", function () {
-  hitnum();
-  generateBubbles();
-  window.addEventListener("resize", generateBubbles);
+  if (document.querySelector(".hitscore")) {
+    hitnum();
+    generateBubbles();
+    window.addEventListener("resize", generateBubbles);
+  }
+
+  if (document.querySelector(".score-list")) {
+    displayScores();
+  }
 });
 
 function generateBubbles() {
@@ -68,10 +75,12 @@ document.querySelector(".st-btn").addEventListener("click", function () {
           document.querySelector(".bottom").innerHTML = `<div>
                     <div><h1>GAME OVER</h1></div>
                     <div><h3>Your Score Is:${score}</h3></div>
+                    <div><a href="scoreboard.html"><button class = "myScore">My Scores</button></a></div>
                     </div>`;
           document.querySelector(".reload").innerHTML = `<div>
                         <button class="reload">Play Again</button>
                     </div>`;
+          saveScore(score);
         }
       }, 1000);
     }
@@ -119,3 +128,23 @@ function scoreDecreaser() {
   score -= 10;
   document.querySelector(".score").textContent = score;
 }
+
+function saveScore(score) {
+  let scores = JSON.parse(localStorage.getItem("scores")) || [];
+  let date = new Date();
+  let timestamp = date.toLocaleString();
+  scores.push({ score, timestamp });
+  localStorage.setItem("scores", JSON.stringify(scores));
+}
+
+function displayScores() {
+  let scores = JSON.parse(localStorage.getItem("scores")) || [];
+  let scoreboard = document.querySelector(".score-list");
+  scoreboard.innerHTML = "";
+  scores.forEach(score => {
+    let listItem = document.createElement("li");
+    listItem.textContent = `Score: ${score.score} - ${score.timestamp}`;
+    scoreboard.appendChild(listItem);
+  });
+}
+
