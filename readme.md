@@ -36,5 +36,5 @@ Welcome to the Bubble Game repository! This project is a fun and engaging bubble
 Feel free to reach out to me for any questions or feedback:
 
 
-- **Website:** [Your Website](https://helloimabid.github.io/portfolio_new/)
-- **LinkedIn:** [Your LinkedIn Profile]([https://www.linkedin.com/in/yourprofile](https://www.linkedin.com/in/sadman-abid-b0a473302/))
+- **Website:** [My Portfolio](https://helloimabid.me)
+- **LinkedIn:** [Your LinkedIn Profile]([https://www.linkedin.com/in/helloimabid/])
